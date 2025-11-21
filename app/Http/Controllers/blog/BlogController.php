@@ -40,6 +40,9 @@ class BlogController extends Controller
     public function show(string $id)
     {
         //
+        $post=Post::all()->find($id);
+        return view('blog.show',compact('post'));
+
     }
 
     /**

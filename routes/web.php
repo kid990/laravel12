@@ -28,13 +28,14 @@ Route::prefix('dashboard')->middleware('auth',UserAccessDashboardMiddleware::cla
     Route::resource('posts', PostController::class);
     Route::resource('categories', CategoryController::class);
 })
-; 
+;
 
 Route::prefix('blog')->group(function() {
-    Route::resource('', BlogController::class);
-   
+    Route::get('',[BlogController::class,'index'])->name('blog.index');
+    Route::get('{id}',[BlogController::class,'show'])->name('blog.show');
+
 })
-; 
+;
 
 
 
@@ -46,7 +47,7 @@ Route::prefix('dashboard')->middleware(['auth', UserAccessDashboardMiddleware::c
     Route::resource('posts', PostController::class);
     Route::resource('categories', CategoryController::class);
 })
-; 
+;
 
 Route::middleware(['auth', UserAccessDashboardMiddleware::class])->prefix('dashboard')->name('dashboard.')->group(function() {
     Route::resource('posts', PostController::class);
