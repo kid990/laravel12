@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
+use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -58,10 +59,10 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         //
-    
+
         return view('dashboard.category.edit', compact('category'));
 
-          
+
     }
 
     /**

@@ -1,5 +1,6 @@
 
 {{-- Componente alert.blade.php --}}
+{{-- ATRIBUTOS --}}
 <div {{ $attributes
         ->merge(['id' => 'alert-box'])
         ->class([

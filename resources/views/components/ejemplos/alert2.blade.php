@@ -1,3 +1,7 @@
+
+
+{{-- ATRIBUTOS CON CLASE, SLOT --}}
+
 <div {{ $attributes->class([
     'p-4 rounded shadow',
     'bg-green-500 text-white' => $type === 'success',

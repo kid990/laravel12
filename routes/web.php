@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\UserAccessDashboardMiddleware;
+use App\Http\Controllers\blog\BlogController;
+use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\PostController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EjemploController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\UserAccessDashboardMiddleware;
+use Illuminate\Support\Facades\Route;
 
 //Blog
-use App\Http\Controllers\blog\BlogController;
 
 
 Route::get('/', function () {
@@ -36,6 +37,10 @@ Route::prefix('blog')->group(function() {
 
 })
 ;
+
+
+
+Route::resource('ejemplo', EjemploController::class);
 
 
 

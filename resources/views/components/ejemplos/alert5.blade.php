@@ -1,4 +1,7 @@
-{{-- resources/views/components/ejemplos1/alert.blade.php --}}
+{{-- resources/views/components/ejemplos/alert.blade.php --}}
+
+
+{{-- props y atributos con merge --}}
 @props([
     'type' => 'info',
     'dismissible' => false,
